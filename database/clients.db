@@ -1,0 +1,28 @@
+CREATE TABLE JobSearch (
+    id INT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    job_title VARCHAR(100) NOT NULL,
+    company VARCHAR(100),
+    job_description TEXT,
+    salary DECIMAL(10, 2),
+    application_deadline DATE,
+    contact_email VARCHAR(100),
+    contact_phone VARCHAR(20),
+    website VARCHAR(100),
+    date_posted DATE
+);
+
+INSERT INTO JobSearch (id, city, job_title, company, job_description, salary, application_deadline, contact_email, contact_phone, website, date_posted)
+VALUES
+(1, 'Юрист', 'Разработчик программного обеспечения', 'TechSolutions AB', 'Требуется опытный разработчик для создания инновационных программных решений. Знание Python и опыт работы с базами данных обязательны.', 70000.00, '2023-12-31', 'jobs@techsolutions.se', '+46 123 456 789', 'www.techsolutions.se/careers', '2023-12-01'),
+(2, 'Юрист', 'Менеджер по маркетингу', 'Global Marketing Group AB', 'Ищем креативного менеджера по маркетингу для разработки стратегий продвижения продуктов на местном и международном уровнях.', 80000.00, '2023-12-25', 'careers@globalmarketinggroup.se', '+46 987 654 321', 'www.globalmarketinggroup.se/careers', '2023-11-28'),
+(3, 'Юрист', 'Финансовый аналитик', 'FinanceTech Sweden AB', 'Ищем аналитика для работы с финансовыми данными и разработки стратегий инвестирования. Опыт в финансовой сфере обязателен.', 90000.00, '2024-01-15', 'hr@financetech.se', '+46 876 543 210', 'www.financetech.se/careers', '2023-12-05'),
+(4, 'Юрист', 'HR менеджер', 'PeopleFirst Stockholm AB', 'Ищем опытного HR менеджера для управления кадровыми процессами. Опыт в рекрутинге и знание трудового законодательства обязательны.', 75000.00, '2023-12-20', 'careers@peoplefirststockholm.se', '+46 234 567 890', 'www.peoplefirststockholm.se/careers', '2023-11-30'),
+(5, 'Юрист', 'Архитектор', 'BuildDesigns AB', 'Требуется опытный архитектор для разработки проектов жилых и коммерческих объектов. Знание AutoCAD и опыт проектирования обязательны.', 85000.00, '2024-01-05', 'jobs@builddesigns.se', '+46 345 678 901', 'www.builddesigns.se/careers', '2023-12-10'),
+(6, 'Юрист', 'менеджер', 'HealthCare Sweden AB', 'Ищем медицинскую сестру для работы в больнице. Опыт работы приветствуется, сертификация обязательна.', 60000.00, '2023-12-28', 'recruitment@healthcaresweden.se', '+46 901 234 567', 'www.healthcaresweden.se/careers', '2023-11-25'),
+(7, 'Юрист', 'UX/UI дизайнер', 'DigitalXperience AB', 'Требуется дизайнер для разработки пользовательских интерфейсов. Знание Adobe Creative Suite и опыт в UX/UI дизайне желательны.', 75000.00, '2024-01-10', 'careers@digitalxperience.se', '+46 678 901 234', 'www.digitalxperience.se/careers', '2023-12-01'),
+(8, 'Юрист', 'Продажи и бизнес-развитие', 'SalesPro Sweden AB', 'Ищем энергичного специалиста по продажам для развития бизнеса компании. Опыт в B2B продажах обязателен.', 80000.00, '2023-12-31', 'info@salesprosweden.se', '+46 345 678 912', 'www.salesprosweden.se/careers', '2023-12-02'),
+(9, 'Юрист', 'Аналитик данных', 'DataTech Stockholm AB', 'Требуется аналитик данных для обработки больших объемов информации. Знание SQL и опыт работы с BI-инструментами приветствуются.', 95000.00, '2024-01-20', 'careers@datatechstockholm.se', '+46 789 012 345', 'www.datatechstockholm.se/careers', '2023-12-08'),
+(10, 'Юрист', 'Логистика и снабжение', 'SupplyChain Masters AB', 'Ищем специалиста по логистике для управления цепочкой поставок. Опыт в снабжении и знание систем управления запасами приветствуются.', 72000.00, '2023-12-29', 'careers@supplychainmasters.se', '+46 567 890 123', 'www.supplychainmasters.se/careers', '2023-11-29');
+
+SELECT * FROM JobSearch;

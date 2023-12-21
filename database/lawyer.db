@@ -1,0 +1,31 @@
+CREATE TABLE JobSearch (
+    id INT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    job_title VARCHAR(100) NOT NULL,
+    company VARCHAR(100),
+    job_description TEXT,
+    salary DECIMAL(10, 2),
+    application_deadline DATE,
+    contact_email VARCHAR(100),
+    contact_phone VARCHAR(20),
+    website VARCHAR(100),
+    date_posted DATE
+);
+
+INSERT INTO JobSearch (id, city, job_title, company, job_description, salary, application_deadline, contact_email, contact_phone, website, date_posted)
+VALUES
+(1, 'Сингапур', 'Разработчик программного обеспечения', 'TechCo SG', 'Требуется опытный разработчик для создания инновационных программных решений. Знание Java и опыт работы с базами данных обязательны.', 6000.00, '2023-12-31', 'jobs@techcosg.com', '+65 1234 5678', 'www.techcosg.com/careers', '2023-12-01'),
+(2, 'Сингапур', 'Менеджер по маркетингу', 'Global Marketing Solutions', 'Ищем креативного менеджера по маркетингу для разработки стратегий продвижения продуктов на рынке Сингапура и Азии.', 7000.00, '2023-12-25', 'careers@globalmarketingsol.com', '+65 9876 5432', 'www.globalmarketingsol.com/careers', '2023-11-28'),
+(3, 'Сингапур', 'Финансовый аналитик', 'FinTech SG', 'Требуется опытный аналитик для работы с финансовыми данными и разработки стратегий инвестирования. Знание Python и опыт работы в финансовой сфере приветствуются.', 8000.00, '2024-01-15', 'hr@fintechsg.com', '+65 8765 4321', 'www.fintechsg.com/careers', '2023-12-05'),
+(4, 'Сингапур', 'HR менеджер', 'PeopleFirst SG', 'Ищем опытного HR менеджера для управления кадровыми процессами. Опыт в рекрутинге и знание трудового законодательства Сингапура обязательны.', 6500.00, '2023-12-20', 'careers@peoplefirstsg.com', '+65 2345 6789', 'www.peoplefirstsg.com/careers', '2023-11-30'),
+(5, 'Сингапур', 'Архитектор', 'BuildDesigns', 'Требуется опытный архитектор для разработки инновационных архитектурных проектов. Знание AutoCAD и опыт в проектировании зданий приветствуются.', 7500.00, '2024-01-05', 'jobs@builddesigns.com', '+65 3456 7890', 'www.builddesigns.com/careers', '2023-12-10'),
+(6, 'Сингапур', 'Медицинская сестра', 'HealthCare SG', 'Ищем медицинскую сестру для работы в клинике. Опыт работы приветствуется, сертификация обязательна.', 5000.00, '2023-12-28', 'recruitment@healthcaresg.com', '+65 4321 9876', 'www.healthcaresg.com/careers', '2023-11-25'),
+(7, 'Сингапур', 'UX/UI дизайнер', 'DigitalXperience', 'Требуется креативный дизайнер для разработки пользовательских интерфейсов. Знание Adobe Creative Suite и опыт в UX/UI дизайне желательны.', 7000.00, '2024-01-10', 'careers@digitalxperience.com', '+65 6543 2109', 'www.digitalxperience.com/careers', '2023-12-01'),
+(8, 'Сингапур', 'Продажи и бизнес-развитие', 'SalesPro SG', 'Ищем энергичного специалиста по продажам для развития бизнеса компании. Опыт в B2B продажах и отличные коммуникативные навыки обязательны.', 7500.00, '2023-12-31', 'info@salesprosg.com', '+65 7890 1234', 'www.salesprosg.com/careers', '2023-12-02'),
+(9, 'Сингапур', 'Аналитик данных', 'DataTech SG', 'Требуется аналитик данных для обработки и анализа больших объемов информации. Знание SQL и опыт работы с BI-инструментами приветствуются.', 8500.00, '2024-01-20', 'careers@datatechsg.com', '+65 8901 2345', 'www.datatechsg.com/careers', '2023-12-08'),
+(10, 'Сингапур', 'Логистика и снабжение', 'SupplyChain Masters', 'Ищем специалиста по логистике для управления цепочкой поставок. Опыт работы в снабжении и знание систем управления запасами приветствуются.', 6800.00, '2023-12-29', 'careers@supplychainmasters.com', '+65 9012 3456', 'www.supplychainmasters.com/careers', '2023-11-29');
+
+
+-- fetch 
+SELECT * FROM JobSearch;
+

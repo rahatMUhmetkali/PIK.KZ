@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sarsenov Dauren, Akilbekov Alar, Baygozha Beybarys">
+  <meta name="description" content="modern internet-shop for every person">
+  <meta name="keywords" content="internet-shop">
+  <title>PIK</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/biba_styles.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  
+  <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
+  
+  <link rel="icon" href="./pic/favicon.ico">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    .panel {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s ease-out;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  
+   <header>
+    <section class="main-bar">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0">
+
+          <div style="margin: 2rem;">
+            <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
+          </div>
+
+          <a class="navbar-brand ml-auto" href="./index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;PIK</a>
+
+
+
+          <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
+            
+
+            <li class="nav-item block-for-signin">
+              <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
+                <br>
+                <p>Кіру</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+    </section>
+   </header>
+
+  
+  
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  
+	<div class="cd-user-modal"> 
+		<div class="cd-user-modal-container"> 
+			<ul class="cd-switcher">
+				<li><a href="#0">Кіру</a></li>
+				<li><a href="#0">Тіркелу</a></li>
+			</ul>
+
+			<div id="cd-login"> 
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Пароль</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Пароль">
+						<a href="#0" class="hide-password">Жасыру</a>
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">мені есте сақтау</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Войти">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Құпия сөзіңізді ұмыттыңыз ба?</a></p>
+				
+			</div> 
+
+			<div id="cd-signup"> 
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Пароль</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Пароль">
+						<a href="#0" class="hide-password">Скрыть</a>
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Мен келысем  <a href="#0">Шартармен</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Создать аккаунт">
+					</p>
+				</form>
+			</div> 
+
+			<div id="cd-reset-password"> 
+				<p class="cd-form-message">Забыли пароль? Пожалуйста, введите адрес своей электронной почты. Вы получите ссылку, чтобы создать новый пароль.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Восстановить пароль">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Вернуться к входу</a></p>
+			</div> 
+			<a href="#0" class="cd-close-form">Закрыть</a>
+  		</div> 
+  	</div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+    <ul id="myMenu">
+    <li><a href="pages/1.html">ОТЗЫВЫ</a></li>
+    <li><a href="pages/4.html">СТОИМОСТЬ УСЛУГ</a></li>
+    <li><a href="pages/hom.html">КЛИЕНТ</a></li>
+    <li><a href="./pages/furniture.html">Работа юриста</a></li>
+    <li><a href="pages/8.html">О НАС</a></li>                                                                                                                                                               
+
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+    <label class="btn btn-outline-light active">
+      <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+    </label>
+    <label class="btn btn-outline-dark">
+      <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+    </label>
+  </div>
+
+</div>
+
+        <header class="bg-light py-5">
+                <div class="text-center text-dark">
+                  <h1 class="display-4 fw-bolder pDecrip live_text">Қош келдіңіз</h1>
+                  <p class="lead fw-normal text-dark-50 pDecripText">
+                     Заңгерлік көмек іздегендерге  онлайн көмек.
+                        
+                  </p>
+                  <div class="pDecripText">
+                    <section id="features">
+                      <div class="row">
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-address-book-o fa-4x icon" aria-hidden="true"></i>
+                          <h3>4 мын+</h3>
+                          <p>күніне тапсырыстар</p>
+                        </div>
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-product-hunt fa-4x icon" aria-hidden="true"></i>
+                          <h3>1 мын+</h3>
+                          <p>Онлайн комек сурагандар</p>
+                        </div>
+                        <div class="col-lg-4 feature-box">
+                          <i class="fa fa-black-tie fa-4x icon" aria-hidden="true"></i>
+                          <h3>1 мын+</h3>
+                          <p>Зангерлік жумышшылар</p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="container">
+                    <div class="pDecripText" style="margin: 0;">
+                        <h1 style="text-align: center;">Біздің артықшылығымыз</h1>
+                        <div class="row" id="benefits"></div>
+                    </div>
+                  </div>
+                </div>
+
+
+        </header>
+        <div id="section-id-1584162981466" class="sppb-section  "><div class="sppb-container-inner"><div class="sppb-row"><div class="sppb-col-md-12" id="column-wrap-id-1584162981463"><div id="column-id-1584162981463" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1584602591073" class=" sppb-wow flipInX clearfix sppb-animated" data-sppb-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: flipInX;"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="monotitle">
+          <h1>
+            Біздің заңгерлер мұны жасайды!
+          </h1>
+          </div>
+          <div class="clear"></div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179732"><div id="column-id-1586981179732" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179740" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Құқықтық жағдайды талдау
+            
+          </div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179733"><div id="column-id-1586981179733" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179757" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Құжаттарды талдау
+          
+          </div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179734"><div id="column-id-1586981179734" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179754" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Мәселенің құқықтық қорытындысы және оны шешу
+          
+          </div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179735"><div id="column-id-1586981179735" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179751" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Мәселені шешпеудің жағымсыз салдарын болжау
+          </div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179736"><div id="column-id-1586981179736" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179745" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Барлық сұрақтарға толық жауаптар
+          
+          </div></div></div></div></div></div></div><div class="sppb-col-md-4" id="column-wrap-id-1586981179737"><div id="column-id-1586981179737" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1586981179748" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content"><div class="rossika">
+            Алғашқы консультация және адвокатпен кездесу
+          
+          </div></div></div></div></div></div></div></div></div></div>
+
+   
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius: 0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+  <div id="b6939" class="block-wrapper block-04-1-one-col-fix-with-title"><section class="landing-block js-animation g-pt-5 g-pb-7" style="">
+    <div class="landing-block-node-inner js-animation container g-max-width-container text-uppercase u-heading-v2-4--bottom text-left g-brd-primary">
+      <h6 class="landing-block-node-subtitle landing-semantic-subtitle-medium-primary js-animation g-font-weight-700 g-letter-spacing-1 g-color-primary g-mb-20 animated">.</h6>
+      <h2 class="landing-block-node-title landing-semantic-title-medium js-animation fadeIn h1 u-heading-v2__title g-line-height-1_3 g-font-weight-700 g-mb-minus-10" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;"><span style="color: rgb(33, 33, 33);">наши услуги</span></h2><div class="landing-block-node-containerbuttons g-pointer-events-all g-flex-centered g-pb-auto g-pt-auto" style=""><div class="landing-block-node-containerbuttons g-pointer-events-all g-flex-centered g-pt-10 g-pb-10"><div class="landing-block-node-containerbuttons g-pointer-events-all g-flex-centered g-pt-10 g-pb-10"></div></div></div>
+    </div>
+  </section></div>
+
+
+
+  <div id="b6943" class="block-wrapper block-34-4-two-cols-with-text-and-icons"><section class="landing-block g-pt-20 g-pb-10 g-bg" style="">
+    <div class="container">
+      
+      <div class="row landing-block-inner"><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange fa fa-bank" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: justify;"><span style="font-size: 1.25rem; color: rgb(33, 33, 33);">Соттарда және арбитраждарда тапсырыс берушінің мүдделерін білдіру</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Біз кез келген сотта, азаматтық және әкімшілік істерде жеке тұлғалар мен компаниялардың мүдделерін қорғаймыз. Қарызды өндіру, моральдық және материалдық залал, мәмілелерді жарамсыз деп тану, мүлікті заңсыз иеленуден өндіру, көшіру және көшіру, заңсыз ғимараттарды бұзу, мұрагерлік даулар, жер даулары бойынша. Сот орындаушыларының әрекеттері мен әрекетсіздігіне, нотариаттық әрекеттерге, мемлекеттік органдардың шешімдеріне дау айту. Салық даулары. Шетелдік соттардың шешімдерін Қазақстан Республикасында тану.</span></p>
+  <p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">2018 жылдан бері табысты тәжирибе, дауыстардың 90%-дан астама жеңіп шықты, буккил Казахстан мен ТМД еліндегі клиентерді канагаттандырды, оз адістемесі</span><span style="font-size: 1rem;">.&nbsp;</span><b style="font-size: 1rem;"><a href="https://www.sherif.kz/court/" target="_blank">Егжей...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange fa fa-money" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: justify;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">Жеке және заңды тұлғалардан қарызды өндіріп алу</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Түбіртектер, орындалған жұмыстар туралы анықтамалар, келісім-шарттар, келісімдер, атқару парақтары, міндеттемелердің барлық түрлері бойынша жеке тұлғалар мен фирмалардың пайдасына қарызды өндіріп алу. Азаматтық міндеттемелерді орындамау, қылмыстар, жол-көлік оқиғалары салдарынан келтірілген материалдық және моральдық залал, негізсіз баюды өндіріп алу, бөтеннің заңсыз иеленуінен мүлікті қайтарып алу нәтижесінде туындайтын қарыз. Қарызды өндіру бойынша жұмыс сотқа дейінгі&nbsp; сотта да, атқарушылық іс жүргізу кезінде де.</span></p><p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">Кез келген кезеңде борышкерлермен жұмыс істеудің практикалық тәжірибесі. Біздің қызметтер үшін төлем тек қарызды өндіріп алу нәтижесіне негізделеді.</span>.&nbsp; &nbsp;&nbsp;<b><a href="https://www.sherif.kz/collection/" target="_blank">яғни...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange fa fa-user-secret" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: justify;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">  алаяқтық әрекеттерден зардап шеккендерге көмек көрсету</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><font color="#212121">Ұрлық, алаяқтық, ақшалай қаражат пен мүлікті заңсыз иемдену, алимент төлеуден жалтару фактілері бойынша қылмыстық істерді қозғау және заңды қамтамасыз ету. Қылмыспен келтірілген материалдық залалды өндіру. Құқық қорғау органдарының әрекеттері мен әрекетсіздігіне шағымдану,&nbsp;</font><span style="font-size: 1rem; text-align: left;">в том числе отказов в возбуждении уголовного дела,</span><span style="color: rgb(33, 33, 33); font-size: 1rem;">&nbsp;через прокуратуру и следственный суд. Привлекаем к ответственности даже при наличии признаков гражданско правовых отношений. Взыскание материального ущерба причиненного преступлением, розыск угнанных автомобилей.</span></p><p style="text-align: justify;"><span style="color: rgb(33, 33, 33); font-size: 1rem;">Опыт работы свыше 5 лет, взаимодействие с правоохранительными органами, успешный практический опыт привлечения к уголовной ответственности.&nbsp; &nbsp;</span><b style="font-size: 1rem;"><a href="https://www.sherif.kz/crime/" target="_blank">яғни...</a></b></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange fa fa-briefcase" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: justify;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">ЖЕКЕ СОТ ОРЫНДАУШЫЛАРЫНЫҢ ӘРЕКЕТТЕРІНЕ ШАПЕЛДЕНУ</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Сіздің құқықтарыңызды бұзатын сот орындаушыларының заңсыз әрекеттеріне немесе әрекетсіздігіне тап болсаңыз, оның ішінде өтініштерге жауап бермеу, атқарушылық құжаттарды орындау бойынша шаралар қолданбау, жалақы немесе зейнетақы шотына заңсыз тыйым салу, сату тәртібін бұзу. мүліктік, атқарушылық іс жүргізу принциптерін бұзу. Сот орындаушыларының үстінен әділет органдарына және мамандандырылған ауданаралық әкімшілік соттарға шағымдар. Шағымдардың барлық түрлерін, сондай-ақ әртүрлі жағдайларға шағымдардың үлгісін жасау.</span></p><p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">Обжалование действий судебных исполнителей одно из основных направлений нашей деятельности, гарантия привлечения к ответственности</span>.&nbsp;<b><a href="https://www.sherif.kz/zhaloba_chsi/" target="_blank">яғни...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange far fa-memo-circle-check" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: justify;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">АТҚАРУ НҰСҚАУЫНЫҢ күшін жою және нотариустың іс-әрекеттеріне шағымдану</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Борышкердің қарсылығы бойынша нотариустың атқару парақтары танысқан күннен бастап 3 жұмыс күні ішінде жойылуы мүмкін. Біз микроқаржы ұйымдарымен және банктермен, коммуналдық қызметтерді жеткізушілермен жасалған несиелік келісім-шарттар және басқа да талаптар бойынша нотариаттық жазбаларды жоямыз. Атқару парағы негізінде салынған қамауға алуды алып тастаймыз. Егер нотариус атқару парағын бұзудан бас тартса, біз сот арқылы оның күшін жоюға көмектесеміз. Біз кепілдендірілген нәтижемен нотариаттық жазбаға ең жақсы қарсылықтарды жасаймыз. Әртүрлі жағдайларға арналған қарсылық үлгілерінің 20-дан астам түрі.</span></p><p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">Біз 2019 жылдан бастап атқару парақтарын, оң нәтижелердің 99% жоямыз, нәтижеге кепілдік береміз немесе төлемді қайтарамыз.</span>.&nbsp;&nbsp;<b><a href="https://www.sherif.kz/zhaloba_chsi/" target="_blank">яғни...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange far fa-head-side-brain" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: left;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">юридическое сопровождение деятельности компании (аутсорсинг)</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;">Юридические проблемы неизбежны в бизнесе, как шторм в океане. Мы в состоянии предоставить Вашему бизнесу полную юридическую защиту по всем вопросам, быть поддержкой штатному юристу или заменить собой юридический отдел, сэкономив Вам деньги на его содержание. Обычно содержание более менее хорошего штатного юриста обходится компании в 350 000 тенге и это без учета налогов, а также необходимости организации рабочего места. Наши тарифы юридического сопровождения бизнеса начинаются от 150 000 тенге. За эту стоимость клиент получает коллективную деятельность нескольких профессиональных юристов. Выгода очевидна.</p><p style="text-align: justify;">Нам доверяют решение своих проблем как крупные компании международного уровня, так и стартапы начинающие своё самостоятельно плавание в океане бизнеса.&nbsp; &nbsp;<b><a href="https://www.sherif.kz/zhaloba_chsi/" target="_blank">яғни...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+         
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange far fa-glasses" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: left;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">Құқықтық құжаттарды ресімдеу (келісім, арыз, шағым)</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Біз барлық құқықтық құжаттарды кәсіби түрде дайындаймыз. Келісім-шарттар, келісімдер, талап-арыздар, хабарламалар, азаматтық және әкімшілік соттарда талап арыздар, құқық қорғау органдарына арыздар, сотқа өтініштер, мемлекеттік органдарға, жеке ұйымдарға шағымдар мен өтініштердің кез келген түрлері. Сонымен қатар, біз әртүрлі жағдайларға арналған дайын құжат үлгілерін ұсынамыз. Біздің құжаттарымыз танымал және пайдалануда тиімді, біз бір жұмыс күні ішінде кез келген күрделілік дәрежесіндегі құжатты дайындаймыз. Біз табысты пайдалануға кепілдік береміз.</span></p><p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">Біздің құжаттарымызды жеке тұлғалар да, компаниялар да, кәсіби заңгерлер де өз жұмыстарында пайдалану үшін сатып алады.</span><span style="font-size: 1rem;">.Аптасына 20-дан астам құжат дайындаймыз.&nbsp; &nbsp;</span><b style="font-size: 1rem;"><a href="https://www.sherif.kz/zhaloba_chsi/" target="_blank">.яғни..</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div><div class="landing-block-node-card js-animation fadeInUp col-md-6 col-lg-6 g-mb-40 landing-card g-px-20" style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+          
+          <div class="media">
+            <div class="d-flex g-mt-25 g-mr-40 g-width-64 justify-content-center">
+              <span class="landing-block-node-card-icon-container g-color-primary d-block g-font-size-48 g-line-height-1">
+                <i class="landing-block-node-card-icon g-color-deeporange far fa-comments-question-check" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;enabled&quot;:false}"></i>
+              </span>
+            </div>
+            <div class="media-body align-self-center">
+              <h5 class="landing-block-node-card-title h5 text-uppercase g-font-weight-800"><p style="text-align: left;"><span style="color: rgb(33, 33, 33); font-size: 1.25rem;">құқықтық мәселелер бойынша заңгерлік кеңес беру</span></p></h5>
+              <div class="landing-block-node-card-text g-font-size-default mb-0 g-color-black"><p style="text-align: justify;"><span style="font-size: 1rem;">Сізге мәселе қаншалықты күрделі болып көрінсе де, әрқашан кем дегенде екі ықтимал шешім болады. Егер мәселе шешілмейтін болып көрінсе, онда біздің заңгерлерден кеңес алудың уақыты келді. Біз мәселені заң тұрғысынан түсіндіріп, оны шешудің нұсқаларын ұсынып қана қоймай, ең тиімді және арзан нұсқаны ұсынатын боламыз. Біздің кеңесімізді бір рет алған соң, сіз міндетті түрде бізбен қайта хабарласасыз. Бізді консультациялардың сапасы мен жұмыс нәтижелері қызықтырады, сондықтан біз сіздің мәселелеріңізге жеке көзқараспен қарауға кепілдік береміз</span></p><p style="text-align: justify;"><span style="font-size: 1rem; text-align: left;">.</span><span style="font-size: 1rem;">.&nbsp; &nbsp;</span><b style="font-size: 1rem;"><a href="https://www.sherif.kz/order/" target="_blank">яғни...</a></b><br></p></div>
+            </div>
+          </div>
+          
+        </div></div>
+      
+    </div>
+  </section></div>
+  
+  
+
+  <footer>
+    <section id="main-footer">
+      <div class="container">
+
+        <div class="row" style="padding-top:2.5rem;">
+          <div class="col-lg-4">
+            <button class="accordion">Сатып алушылар үшін</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Қалай тапсырыс беруге болады</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Төлем әдістері</a></li>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4" style="margin-right: 0; padding-right: 0;">
+            <button class="accordion">Компания</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+              <li><a rel="nofollow" href="./pages/about.html" style="color: lightgrey;">О нас</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Реквизиты</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Офис</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Контакты</a></li>
+
+            </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 0.05rem solid white; border-radius: 9px; padding: 0px; margin-right: 50px;"><img src="https://www.yuuju.hn/assets/img/appGallery-es.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 1px solid white; border-radius: 6px; padding: 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 2px solid lightgrey; border-radius: 9px; padding: 0px; margin-left: 50px;"><img src="https://getstayactive.com/wp-content/uploads/2017/10/App-Store-Logo.png" style="width:150px; height:45px;"></a>
+          </li>
+        </ul>
+        <br>
+
+        <div class="under-fav">
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="https://vk.com/photo839300608_456239017"><i class="fab fa-vk fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://m.facebook.com/story.php?story_fbid=pfbid02UZqzdZgnuL5MTHHMMVngr2bBASH2LSa5CUrrhyTmxTrGwNzD6D4ikNg6u7Qrr4Fl&id=100059440174202&mibextid=9R9pXO"><i class="fab fa-facebook fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://youtube.com/shorts/oSxyPQ0lQTU?si=bzy-ZsD2XMBFA_o4"><i class="fab fa-youtube fa-2x icon-youtube"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/p/C1BmatbokL9/?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram fa-2x icon-instagram"></i></a>
+          </li>
+
+        </ul>
+
+        <div class="nav justify-content-center">
+
+          <span class="footer_defination">2021-2022 © PIK</span>
+          <span class="footer_defination" style="padding-left: 5px;"> - заң қызметтерін іздейтіндерге заманауи онлайн көмек</span>
+          <span class="footer_defination">электроника және басқа да көптеген қызықты өнімдер. Барлық құқықтар сақталған.</span>
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-visa fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/VzuwBDTtj6qCoJWIxikZAJ8Y5I1YGdlxzWhUo3-Xe51J7p_vD-RYtmpb0ffmh64iWeg" alt="kaspi" style="width:30px;">
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/AcTuzpsadAJTixBYyIpMvr8IbSX_hwZkX1el4WldG9L6hncSa2sBhehqnJBwITZHF2Bi" alt="halyk" style="width:30px;">
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./scripts/index.js" charset="utf-8"></script>
+  
+  <script src="./scripts/biba.js" charset="utf-8"></script>
+
+
+  
+  <script src="./assets/scripts/click.js"></script>
+  <script>setClickListener("./assets/sounds/click.mp3")</script>
+
+  <script src="./assets/scripts/adapcarousel.js"></script>
+  <script src="./assets/scripts/caro.js"></script>
+  <script src="./assets/scripts/grido.js"></script>
+  <script src="./assets/scripts/home.js"></script>
+
+  <div id="section-id-1584162981535" class="sppb-section  "><div class="sppb-container-inner"><div class="sppb-row"><div class="sppb-col-md-12" id="column-wrap-id-1584162981534"><div id="column-id-1584162981534" class="sppb-column"><div class="sppb-column-addons"><div id="sppb-addon-1584162981538" class="clearfix"><div class="sppb-addon sppb-addon-raw-html "><div class="sppb-addon-content">
+    <div class="blogs_kont">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.0516031987668!2d71.41999601586859!3d51.12595617957419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585d86bd2b8d5%3A0xbfb00ca11efce191!2z0K7RgNC40LTQuNGH0LXRgdC60LDRjyDQutC-0LzQv9Cw0L3QuNGPIFJFU1BPTlNB!5e0!3m2!1sru!2skz!4v1660652769525!5m2!1sru!2skz" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div></div></div></div></div></div></div></div></div></div>
+</body>
+
+</html>
